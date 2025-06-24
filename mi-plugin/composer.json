@@ -1,0 +1,6 @@
+{
+  "name": "tu-usuario/mi-plugin",
+  "description": "Estructura inicial de plugin WordPress",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later"
+}
