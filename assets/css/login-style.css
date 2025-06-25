@@ -1,5 +1,37 @@
 /* Estilos personalizados para el formulario de login de modelos */
 
+/* Paleta de colores base */
+:root {
+    --rc-bg-color: #000;      /* Negro principal */
+    --rc-accent-color: #d4af37; /* Dorado */
+    --rc-text-color: #fff;    /* Texto general */
+}
+
 body.login-modelos {
-    background-color: #f8f9fa;
+    background-color: var(--rc-bg-color);
+    color: var(--rc-text-color);
+}
+
+/* Tarjeta del formulario */
+.rc-card {
+    background-color: var(--rc-bg-color);
+    color: var(--rc-text-color);
+    border: 1px solid var(--rc-accent-color);
+}
+
+.rc-card-header {
+    background-color: var(--rc-accent-color);
+    color: #000;
+}
+
+/* Botón principal */
+.rc-btn {
+    background-color: var(--rc-accent-color);
+    border-color: var(--rc-accent-color);
+    color: #000;
+}
+.rc-btn:hover {
+    background-color: #c79c2d;
+    border-color: #c79c2d;
+    color: #000;
 }

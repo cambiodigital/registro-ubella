@@ -17,6 +17,20 @@ function rc_enqueue_login_assets() {
 }
 
 /**
+ * Agrega una clase al body cuando se visualiza la página de login.
+ *
+ * @param array $classes Clases actuales del body.
+ * @return array Clases modificadas.
+ */
+function rc_body_class_login( $classes ) {
+    if ( is_page( RC_LOGIN_PAGE_SLUG ) ) {
+        $classes[] = 'login-modelos';
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'rc_body_class_login' );
+
+/**
  * Renderiza el formulario de login para modelos.
  *
  * @return string HTML del formulario o mensaje si ya está logueado.
@@ -31,8 +45,8 @@ function rc_login_modelos_shortcode() {
     ob_start();
     ?>
     <div class="container mt-5" style="max-width: 400px;">
-        <div class="card shadow">
-            <div class="card-header bg-primary text-white text-center">
+        <div class="card rc-card shadow">
+            <div class="card-header rc-card-header text-center">
                 <h5>Ingreso exclusivo para Modelos</h5>
             </div>
             <div class="card-body">
@@ -46,7 +60,7 @@ function rc_login_modelos_shortcode() {
                         <input type="password" class="form-control" name="pwd" id="user_pass" required>
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-success">Ingresar</button>
+                        <button type="submit" class="btn rc-btn">Ingresar</button>
                     </div>
                 </form>
                 <div class="text-center mt-3">
