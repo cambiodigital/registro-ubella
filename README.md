@@ -1,4 +1,4 @@
-# Registro-Chicas
+# Registro-usuarios
 
 Estructura básica para iniciar un plugin de WordPress que podrá actualizarse mediante [GitHub Updater](https://github.com/afragen/github-updater).
 
